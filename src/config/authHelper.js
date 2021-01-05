@@ -42,9 +42,10 @@ const generateRefreshToken = () => {
   };
 };
 
-const replaceDbRefreshToken = (tokenId, userId) => Token.findOneAndRemove({ userId })
+const replaceDbRefreshToken = async (tokenId, userId) => await Token.findOneAndRemove({ userId })
   .exec()
-  .then(() => Token.create({ tokenId, userId }));
+  // eslint-disable-next-line no-return-await
+  .then(async () => await Token.create({ tokenId, userId }));
 
 module.exports = {
   generateAccessToken,

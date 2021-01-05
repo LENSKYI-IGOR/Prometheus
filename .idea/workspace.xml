@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e292212e-449d-445d-a693-22e1e3416966" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Prometheus.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/authHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/nodemailer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/authHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/errorHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/passport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/token.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/user.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/answer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/email.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/oauth.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/authHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/authHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/passport.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +96,7 @@
       <workItem from="1609629001955" duration="7958000" />
       <workItem from="1609674619068" duration="2039000" />
       <workItem from="1609676747533" duration="1907000" />
-      <workItem from="1609678685715" duration="43976000" />
+      <workItem from="1609678685715" duration="46046000" />
     </task>
     <servers />
   </component>

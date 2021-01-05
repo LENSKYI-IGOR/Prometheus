@@ -30,25 +30,24 @@ const jwt = async (payload, done) => {
 };
 
 passport.use(new FacebookStrategy({
-  clientID: '172268524266580',
-  clientSecret: '8d2bed7293e7bb5bd3f749fc3eadd43f',
-  callbackURL: 'http://localhost:7777/api/auth/facebook/callback',
-
+  clientID: process.env.FACEBOOK_ID,
+  clientSecret: process.env.FACEBOOK_SECRET,
+  callbackURL: `${process.env.SITE_URL}/api/auth/facebook/callback`,
 },
 ((accessToken, refreshToken, profile, done) => done(null, profile))));
 
 passport.use(new TwitterStrategy({
-  consumerKey: '1wlKu88RmEYSuCxQIzabQnDsh',
-  consumerSecret: 'lixOYuuvgsJLBmWhL3tnTjLLiFoz1PWdfwe7g9BgShQDXaoeJ1',
-  callbackURL: '/api/auth/twitter/callback',
+  consumerKey: process.env.TWITTER_ID,
+  consumerSecret: process.env.TWITTER_SECRET,
+  callbackURL: `${process.env.SITE_URL}/api/auth/twitter/callback`,
   scope: ['profile'],
 },
 ((token, tokenSecret, profile, done) => done(null, profile))));
 
 passport.use(new GoogleStrategy({
-  clientID: '82125339286-efnka98lldndbelkddhrkn68g70kt8mg.apps.googleusercontent.com',
-  clientSecret: 'Jo_0u6js1GAbynbJBOEMyI7N',
-  callbackURL: 'http://localhost:7777/api/auth/google/callback',
+  clientID: process.env.GOOGLE_ID,
+  clientSecret: process.env.GOOGLE_SECRET,
+  callbackURL: `${process.env.SITE_URL}/api/auth/google/callback`,
   scope: ['profile'],
 },
 ((accessToken, refreshToken, profile, done) => done(null, profile))));
