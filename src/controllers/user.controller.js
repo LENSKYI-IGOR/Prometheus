@@ -63,5 +63,7 @@ module.exports.newPassword = async (req, res) => {
     await User.findByIdAndUpdate(hex, {
       password: bcrypt.hashSync(req.body.password.toString(), salt),
     }, { upsert: true }, (err, doc) => res.status(200).json({ doc }));
+  } else {
+    res.status(401).json({ message: error.noPermissions })
   }
 };
