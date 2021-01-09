@@ -21,13 +21,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-app.use(session({
-  secret: 'PrometheusProject',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false },
-}));
-
 /** Routes */
 app.use('/api/auth', authRoutes);
 

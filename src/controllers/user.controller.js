@@ -61,7 +61,6 @@ module.exports.newPassword = async (req, res) => {
   ) {
     const salt = bcrypt.genSaltSync(10);
     await User.findByIdAndUpdate(hex, {
-      email: req.body.email,
       password: bcrypt.hashSync(req.body.password.toString(), salt),
     }, { upsert: true }, (err, doc) => res.status(200).json({ doc }));
   }
