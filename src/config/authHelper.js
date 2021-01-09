@@ -42,6 +42,7 @@ const generateRefreshToken = () => {
   };
 };
 
+// eslint-disable-next-line no-return-await
 const replaceDbRefreshToken = async (tokenId, userId) => await Token.findOneAndRemove({ userId })
   .exec()
   // eslint-disable-next-line no-return-await

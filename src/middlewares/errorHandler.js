@@ -80,3 +80,11 @@ module.exports.expiredToken = {
     human: 'YOU HAVE EXPRIRED TOKEN, LOG IN AGAIN',
   },
 };
+
+module.exports.noPermissions = {
+  code: '101C',
+  desc: {
+    tr: 'no_permissions',
+    human: 'YOU HAVE NO PERMISSIONS',
+  },
+};

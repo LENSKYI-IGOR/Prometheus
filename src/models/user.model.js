@@ -13,6 +13,21 @@ const userSchema = new mongoose.Schema({
     minlength: 8,
   },
 
+  name: {
+    type: String,
+    maxlength: 32,
+  },
+
+  tel: {
+    type: Number,
+    maxlength: 11,
+  },
+
+  surname: {
+    type: String,
+    maxlength: 32,
+  },
+
   role: {
     type: String,
   },

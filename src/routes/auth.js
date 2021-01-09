@@ -5,6 +5,7 @@ const passport = require('passport');
 
 const auth = require('../controllers/auth');
 const authController = require('../controllers/auth');
+const users = require('../controllers/user.controller');
 
 /** .GET routes* */
 
@@ -71,5 +72,7 @@ router.post('/refresh-tokens', auth.refreshTokens);
 router.post('/login', authController.login);
 
 router.post('/register', authController.register);
+
+router.post('/profile/edit/:id', users.editUser);
 
 module.exports = router;

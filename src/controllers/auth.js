@@ -10,7 +10,7 @@ const authHelper = require('../config/authHelper');
 const error = require('../middlewares/errorHandler');
 require('dotenv').config();
 
-/** Update and Refresh Tokens **/
+/** Update and Refresh Tokens * */
 
 const updateTokens = (userId) => {
   const accessToken = authHelper.generateAccessToken(userId);
@@ -42,7 +42,7 @@ const refreshTokens = (req, res) => {
     .catch((err) => res.status(400).json({ message: err.message }));
 };
 
-/** Email Register and activating modules **/
+/** Email Register and activating modules * */
 
 const mailRegister = async (email, cookie, res) => {
   const isRegistered = await User.findOne({ _id: cookie.toString() });
