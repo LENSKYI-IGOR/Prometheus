@@ -75,4 +75,8 @@ router.post('/register', authController.register);
 
 router.post('/profile/edit/:id', users.editUser);
 
+router.post('/password-recovery', users.passwordRecovery);
+
+router.post('/password-recovery/:id', users.newPassword);
+
 module.exports = router;
