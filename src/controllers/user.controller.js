@@ -10,13 +10,10 @@ const User = require('../models/user.model');
 module.exports.editUser = async (req, res) => {
   const candidate = await userPermissions(req);
   if (candidate) {
-    await User.findByIdAndUpdate(candidate._id, {
-      name: req.body.name,
-      surname: req.body.surname,
-      tel: req.body.tel,
-    }, { new: true, upsert: true }, (err, doc) => {
-      res.status(200).json({ doc });
-    });
+    await User.findByIdAndUpdate(candidate._id, req.body,
+      { new: true, upsert: true }, (err, doc) => {
+        res.status(200).json({ doc });
+      });
   } else {
     res.status(401).json({ message: error.noPermissions });
   }
@@ -25,7 +22,6 @@ module.exports.editUser = async (req, res) => {
 module.exports.passwordRecovery = async (req, res) => {
   if (EmailValidator.validate(req.body.email)) {
     const candidate = await User.findOne({ email: req.body.email });
-    console.log(candidate);
     if (candidate) {
       const hashids = new Hashids();
 
@@ -64,6 +60,6 @@ module.exports.newPassword = async (req, res) => {
       password: bcrypt.hashSync(req.body.password.toString(), salt),
     }, { upsert: true }, (err, doc) => res.status(200).json({ doc }));
   } else {
-    res.status(401).json({ message: error.noPermissions })
+    res.status(401).json({ message: error.noPermissions });
   }
 };
